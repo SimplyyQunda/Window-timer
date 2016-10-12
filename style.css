@@ -1,19 +1,18 @@
-.clock-box{
-	border: 1px solid red;
-	height: 450px;
-	width: 676px;
-	background:black;
-	text-align: center;
-	
-	
-	
+.clock-box {
+  height: 450px;
+  width: 676px;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 65px; }
 
-}
+#hexCode {
+  color: white;
+  font-size: 65px;
+  text-align: center;
+  padding-top: 15%; }
 
-.timer{
-	color: white;
-	font-size: 65px;
-	text-align: center;
-	padding-top: 15%;
-
-}
+div {
+  order: 1px solid red;
+  height: 450px;
+  width: 676px; }
