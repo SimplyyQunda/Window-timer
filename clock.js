@@ -30,45 +30,43 @@ if (seconds >= 10) {
 	}
 };
 
-setInterval (clocktime,1000);
 
 
+// Hex code portion //
 
- function colorpop() {
- 	var today = new Date();
-	var hour = today.getHours();
+function hextime () {
+	var today = new Date();
+	var hours = today.getHours();
 	var minutes = today.getMinutes();
 	var seconds = today.getSeconds();
-
-	// var bgcolor =today.getBackgroundcolor(#f5b405);
- 	
- 	var showhex = document.getElementById("hexcode");
- 	showhex.innerHTML = "<p>#"
- 	+ hour + minutes + seconds  + "</p>"
-
-
-
- };
-setInterval(colorpop,1000);
-
-
-
-
-var hexCodeNumber = 123456
-
-function hexCodeChange () {
-	hexCodeNumber = hexCodeNumber + 20;
-};
-
-function hexColorBackground () {
 	var hexBlock = document.getElementById("hexCode");
-	hexBlock.innerHTML= "<div style=\"background-color: " + hexCodeNumber + ";\"> #" + hexCodeNumber;
-	// hexBlock.style.backgroundColor = ("#" + hexCodeNumber);
+
+
+	if (seconds < 10) {
+		seconds = "0" + seconds;
+	}
+
+	if (minutes < 10) {
+		minutes = "0" + minutes;
+	}
+
+	if (hours < 10) {
+		hours = "0" + hours;
+	}
+
+	var hexCodeString = "#" + hours + minutes + seconds;
+
+	// console.log('seconds: ' + seconds, "minutes: "+ minutes, "hours: " + hours);
+
+	hexBlock.style.backgroundColor = hexCodeString;
+	hexBlock.innerHTML= "<div>" + hexCodeString + '</div>';
+
 };
+
+
+
+
+
 
 setInterval (clocktime,1000);
-setInterval (hexColorBackground,500)
-setInterval (hexCodeChange,500)
-
-
-
+setInterval (hextime,1000);
